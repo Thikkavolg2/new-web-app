@@ -1,13 +1,19 @@
 <html>
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title> tk web development
 </title>
 
 <style>
+
+
 body {
   background-color:#30C5FF ;
+  
+  margin: 0;
+       
+  width: 100%;
 }
 
 
@@ -23,15 +29,7 @@ color:green;
 
 }
 
-.st { 
-              font-weight:900;
 
-border-style: ridge;
-
-background-color: black;
-color:#30C5FF;
-opacity: 1;text-align: center;
-}
 
 .tst {width:34%; 
 
@@ -77,50 +75,43 @@ border-style: ridge;
 float:left;
 }
 
+
+@media screen and (max-width: 800px) {
+    .tst, div[style*="float: right"] {
+        width: 100% !important;
+        float: none !important;
+    }
+}
 </style>
 
 
 </head>
 
 
-<body>
+<body><img src="tk001.jpg" style="
+    width: 95%; 
+    height: 100px; 
+    background-color: black; 
+    object-fit: contain; 
+    display: block; 
+    margin: 10px auto 20px auto; 
+    object-position: center;
+  border: 3px solid #00FF41; /* මැට්‍රික්ස් කොළ පාට */
+    border-radius: 5px; 
+    box-shadow: 0 0 15px #00FF41; animation: flicker 0.1s infinite;
+">
 <div class="tst">
 
-<img src="tk001.jpg" width="200px" height="100px" align="left"><br><br><br><br><br><br>
-<div class="st">
-<form>
-
-
-
- <p>First name <input placeholder="type"> Last name <input placeholder="type"> </p> 
-
-<p>User Name <input placeholder="type "  > </p>
-<p class="power"> use my current email instead </p>
-
-<p>Gender: 
-         <select>
-		         <option> male </option>
-		           <option selected> female </option>
-		 
-		 </select>
-<p> Password <input placeholder="type"> </p>
-
-<p>    Under 18 <input type="radio" name="age" > </p>
-<p>    Over 18 <input type="radio"   name="age"> </p>
- <p> Stay <span class="underline">sing in</span> <input type="checkbox"></p>
- 
-<p align="center"><input type="submit" value="next" ></p>
 
 </div>
-</div>
-<div style="position: relative; float: right; width: 400px;">
+<div style="position: relative; float: right; width: 700px;">
 
     <div style="
         position: absolute; 
-        top: 625; 
+        top: 480px; 
         left: 0; 
-        width: 96.4%; 
-        height: 75px; 
+        width: 100%; 
+        height: 84px; 
         background-color: black; 
         z-index: 10;
         color: #30C5FF;
@@ -131,7 +122,7 @@ float:left;
         CREATED BY<BR> THEEKSHANA 
     </div>
 
-    <iframe src="https://youtubeurlthikka.created.app/" width="400"height="700" style="border: none; display: block;"></iframe>
+    <iframe src="https://youtubeurlthikka.created.app/" width="100%"height="550px" style="border: 8px ridge #62589c; border-radius: 10px;display: block;"></iframe>
 
 </div>
 
@@ -141,10 +132,9 @@ float:left;
 
 
 
-<div class="nob"><p>  use my current email instea>
-dව් </p>
 
-</div>
+
+
 
 
 
