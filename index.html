@@ -1,94 +1,64 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title> tk web development
-</title>
+<title> tk web development </title>
 
 <style>
-
-
 body {
-  background-color:#30C5FF ;
-  
+  background-color: #30C5FF;
   margin: 0;
-       
   width: 100%;
+  overflow-x: hidden; /* දෙපැත්තට scroll වීම නැති කිරීමට */
 }
 
-
-{
-
-color:green;
-  font-family:Copperplate, Papyrus, fantasy;
-  font-size: 20px;
+/* Hacking Style Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
 
-.underline {
-              text-decoration:underline;
-
+.tst {
+  width: 30%; /* PC එකේදී වම් පැත්තේ ඉඩ */
+  float: left;
 }
 
-
-
-.tst {width:34%; 
-
- float:left;}
- 
- 
-input::placeholder {
-  color: #30C5FF;
-  font-weight:900;
-  opacity: 1;
-  font-family:Copperplate, Papyrus, fantasy;
-background-color:green;
-text-align: center;
-                                 font-size: 25px;
-                   
+/* Video එක තියෙන container එක */
+.video-wrap {
+  position: relative; 
+  float: right; 
+  width: 680px; 
+  margin-right: 40px; /* PC එකේදී දකුණෙන් ඉඩ තැබීමට */
 }
-
-          input[type=submit] {
-        background-color: #62529c;
-        border: ridge;
-color: #30C5FF;
-font-weight:900; opacity: 1;
-
-}
-
-.power {
-color: #30C5FF;
-
-}
-
-.ytsite{
-
-       
-
-
-}
-
-
-.nob {
-clear:both;
-color: red;
-border-style: ridge;
-float:left;
-}
-
 
 @media screen and (max-width: 800px) {
-    .tst, div[style*="float: right"] {
+    .tst {
         width: 100% !important;
         float: none !important;
     }
+    
+    .video-wrap {
+        width: 95% !important; /* Mobile එකේදී 95% පළල */
+        float: none !important;
+        margin: 0 auto !important; /* Mobile එකේදී හරියටම මැදට */
+    }
+
+    .video-wrap iframe {
+        height: 400px !important; /* Mobile එකේදී වීඩියෝ උස අඩු කිරීම */
+    }
+    
+    .label-box {
+        top: auto !important;
+        bottom: 10px !important;
+        width: 100% !important;
+    }
 }
 </style>
-
-
 </head>
 
+<body>
 
-<body><img src="tk001.jpg" style="
+<img src="tk001.jpg" style="
     width: 95%; 
     height: 100px; 
     background-color: black; 
@@ -96,70 +66,49 @@ float:left;
     display: block; 
     margin: 10px auto 20px auto; 
     object-position: center;
-  border: 3px solid #00FF41; /* මැට්‍රික්ස් කොළ පාට */
+    border: 3px solid #00FF41; 
     border-radius: 5px; 
-    box-shadow: 0 0 15px #00FF41; 
+    box-shadow: 0 0 15px #00FF41;
+    animation: flicker 0.2s infinite;
 ">
+
 <div class="tst">
+    </div>
 
+<div class="video-wrap">
 
-</div>
-<div style="position: relative; float: right; width: 700px;">
-
-    <div style="
+    <div class="label-box" style="
         position: absolute; 
-        top: 480px; 
-        left: 0; 
+        top: 455px; 
+        left: 50%;
+        transform: translateX(-50%); /* මැදටම Align කිරීමට */
         width: 90%; 
-        height: 84px; 
+        height: 80px; 
         background-color: black; 
         z-index: 10;
         color: #30C5FF;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold;border: 3px solid #00FF41; /* මැට්‍රික්ස් කොළ පාට */
-    border-radius: 5px; 
-    box-shadow: 0 0 15px #00FF41;">
+        font-weight: bold;
+        border: 2px solid #00FF41;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #00FF41;
+        pointer-events: auto; 
+        cursor: not-allowed; ">
         CREATED BY<BR> THEEKSHANA 
     </div>
 
-    <iframe src="https://youtubeurlthikka.created.app/" width="100%"height="550px" style="border: 8px ridge #62589c; border-radius: 10px;display: block;position: relative; float: right; width: 680px; margin-right: 40px;"allowfullscreen></iframe>
+    <iframe src="https://youtubeurlthikka.created.app/" 
+        width="100%" 
+        height="550px" 
+        style="border: 8px ridge #62589c; border-radius: 10px; display: block;" 
+        allowfullscreen>
+    </iframe>
 
 </div>
 
 <div style="clear: both;"></div>
- 
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
-
 </html>
